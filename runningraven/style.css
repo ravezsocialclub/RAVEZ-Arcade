@@ -1,0 +1,284 @@
+:root{
+  --accent-color: #000000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-logo {
+  position: center;
+  top: 50px;
+  right: 550px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  width: 220px;
+}
+
+body {
+  background: linear-gradient(185deg, #FFFFFF, #7F48B0, #9417BD); /* Updated gradient direction and colors */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.4;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  cursor: url(ravencursor.png), auto; /* Custom cursor */
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  height: 300px;
+  border-bottom: 4px solid #333;
+  overflow: hidden;
+  background-color: transparent; /* Transparent background */
+}
+
+.dino {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  background: url('running-raven.png') no-repeat center; /* Replace with correct URL */
+  background-size: contain;
+}
+
+.cactus {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 50px;
+  background: url('plant.png') no-repeat center;
+  background-size: contain;
+  animation: moveCactus 2s linear infinite;
+}
+
+@keyframes moveCactus {
+  from {
+    right: -20px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.score, .high-score {
+  position: absolute;
+  top: 50%;
+  font-size: 16px;
+  color: #000000; /* Ensure text is visible */
+  width: 200px;
+}
+
+.score {
+  position: absolute;
+  left: 10px;
+  top: 205px;
+  height: 12%;
+}
+
+.high-score {
+  left: 10px;
+  top: 160%;
+  height: 20%;
+  color: #000000;
+}
+
+.restart-button {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 21px;
+  cursor: pointer;
+  background-color: #fff; /* Button background for visibility */
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  color: #9417BD;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.start-button {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: #9417BD;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+#muteButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+
+#muteButton.active img {
+  /* Add styles for the active state */
+  /* For example, change opacity to indicate muted state */
+  opacity: 0.5;
+}
+
+#muteButton img {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+#muteButton img:hover {
+  transform: scale(1.1);
+}
+
+#muteButton p {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+.raven-one {
+  width: 50%;
+  height: 10%;
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a:hover {
+  color: #5c128e; /* Change to the desired hover color */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.privacy-text {
+  position: center;
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the privacy policy text */
+}
+
+.terms-text  {
+  position: center;
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the privacy policy text */
+}
+
+.raven-one {
+  position: fixed;
+  bottom: 0px; /* Adjust position as needed */
+  left: 13px; /* Adjust position as needed */
+  z-index: 999; /* Ensure it is above the phone screen */
+}
+
+.raven-two {
+  position: fixed;
+  bottom: 0px; /* Adjust position as needed */
+  left: 50px; /* Slightly to the left of the first one */
+  z-index: 999; /* Ensure it is above the phone screen */
+}
+
+ul li a {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for "Our Story", "Contact Us", "Careers" */
+}
+
+.mute-btn a{
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+.image-video video {
+  width: 195px;
+  position: absolute;
+  bottom: 90px;
+  right: 36px;
+  border-radius: 80px;
+}
+
+.phone-screen {
+  position: absolute;
+  bottom: -7px;
+  right: -70px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .phone-screen {
+    visibility: collapse;
+  }
+  .image-video video {
+    visibility: collapse;
+  }
+}
+
+.title {
+  position: relative;
+  right: 50%;
+  margin-top: 20px;
+}
+
+ul li a img {
+  height: 35px;
+  width: 30px;
+}
