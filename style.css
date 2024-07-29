@@ -188,3 +188,9 @@ ul li a img {
   height: 35px;
   width: 30px;
 }
+footer {
+  position: none;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
