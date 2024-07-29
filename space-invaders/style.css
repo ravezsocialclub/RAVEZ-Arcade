@@ -1,0 +1,58 @@
+:root {
+    --cell-size: 40px;
+    --grid-size: 15;
+}
+.main-logo{
+  width:50%;
+  height: 70%;
+  left: 34px;
+ }
+ 
+ body {
+   background: linear-gradient(to bottom, #fff, #9417BD, #fff,#9417BD, #fff);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: 'Press Start 2P', cursive;
+   line-height: 1.4;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   cursor: url(ravencursor.png), auto; /* Custom cursor */
+ }
+ 
+
+#grid{
+  width: calc(var(--cell-size) * var(--grid-size) + 4px);
+  height: calc(var(--cell-size) * var(--grid-size) + 4px);
+  border: 2px solid white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#grid > div{
+  width: var(--cell-size);
+  height: var(--cell-size);
+  font-size: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.alien{
+  background-image: url('alien.png');
+}
+
+.spaceship{
+  background-image: url('spaceship.png');
+  
+}
+
+.laser{
+  background-image: url('laser.png');
+}
+
+.boom{
+  background-image: url('boom.png');
+}

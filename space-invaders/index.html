@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders - Arcade Game</title>
+    <link rel="icon" href="../RAVEZ logo-04.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-data">
+        <h1>Space Invaders</h1>
+        <p>Press the keys &#8592; and &#8594; to move the spaceship. <br> SPACE to shoot the aliens! </p>
+        <h3>Score: <span id="score"></span></h3>
+    </div>
+    
+    <div class="container">
+        <a href="../index.html">
+            <div id="mainlogo" >
+                <img src="../raven-white.png" alt="Arcade Game Logo" width="450">
+            </div>
+        </a>
+        <div class="board" style="position: realative; top: 20%; left: 40%x; ;">
+          <div class="game-area" style="height:80;">
+              <div id="grid"></div>
+          </div>
+          
+        </div>  
+    </div>
+    </footer>
+    <script src="../common/utils.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
