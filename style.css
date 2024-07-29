@@ -24,11 +24,14 @@ body {
 }
 
 .main-logo {
+  position: absolute;
+  top:20px;
+  right:40%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   height: 100%; /* Adjust based on your needs */
-  width: 80%;
+  width: 20%;
   padding-top: 20px; /* Adjust the spacing from the top */
 }
 
@@ -125,7 +128,7 @@ a:hover {
 .terms-text {
   position: center;
   text-align: center;
-  margin: 50px auto;
+  margin: auto;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the privacy policy text */
