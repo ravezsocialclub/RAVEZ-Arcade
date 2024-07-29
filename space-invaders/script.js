@@ -6,7 +6,6 @@ const rxc = size * size;
 const cells = [];
 const speed = 400;
 
-
 const aliens = [
     0,1,2,3,4,5,6,7,8,9,
     15,16,17,18,19,20,21,22,23,24,
@@ -151,61 +150,3 @@ function shoot(event) {
 }
 
 document.addEventListener('keydown', shoot);
-
-// Gamepad integration
-let gamepadIndex = null;
-
-function handleGamepadInput() {
-    const gamepads = navigator.getGamepads();
-    if (gamepadIndex !== null && gamepads[gamepadIndex]) {
-        const gp = gamepads[gamepadIndex];
-
-        // Axis 0 for left/right movement
-        const xAxis = gp.axes[0];
-        if (xAxis > 0.5) {
-            moveSpaceship({ code: 'ArrowRight' });
-        } else if (xAxis < -0.5) {
-            moveSpaceship({ code: 'ArrowLeft' });
-        }
-
-        // Button 0 to shoot
-        if (gp.buttons[0].pressed) {
-            shoot({ code: 'Space' });
-        }
-    }
-}
-
-function scanGamepads() {
-    const gamepads = navigator.getGamepads();
-    for (let i = 0; i < gamepads.length; i++) {
-        if (gamepads[i]) {
-            gamepadIndex = i;
-            console.log("Gamepad connected:", gamepads[i].id);
-            break;
-        }
-    }
-}
-
-// Game loop for gamepad input
-function gameLoop() {
-    handleGamepadInput();
-    requestAnimationFrame(gameLoop);game
-}
-
-window.addEventListener("gamepadconnected", (event) => {
-    gamepadIndex = event.gamepad.index;
-    console.log("Gamepad connected at index", gamepadIndex);
-});
-
-window.addEventListener("gamepaddisconnected", (event) => {
-    if (gamepadIndex === event.gamepad.index) {
-        gamepadIndex = null;
-        console.log("Gamepad disconnected from index", event.gamepad.index);
-    }
-});
-
-// Initial scan for gamepads
-scanGamepads();
-
-// Start the game loop
-gameLoop();

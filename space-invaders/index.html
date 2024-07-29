@@ -10,14 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="game-data">
-        <h1>Space Invaders</h1>
-        <p>Press the keys &#8592; and &#8594; to move the spaceship. <br> SPACE to shoot the aliens! </p>
-        <h3>Score: <span id="score"></span></h3>
-    </div>
     
     <div class="container">
         <a href="../index.html">
@@ -29,9 +25,35 @@
           <div class="game-area" style="height:80;">
               <div id="grid"></div>
           </div>
-          
+          <div class="game-data">
+              <h1>Space Invaders</h1>
+              <p>Press the keys &#8592; and &#8594; to move the spaceship. <br> SPACE to shoot the aliens! </p>
+              <h3>Score: <span id="score"></span></h3>
+              <a href="../index.html"> <button style ="  display:flex;
+                align-items: center;
+                padding: 15px 30px;
+                font-size: 16px;
+                color: white;
+                gap: 10px;
+                border:none;
+                border-radius: 50px;
+                background: linear-gradient(270deg,black, #5c128e);
+                cursor: pointer;
+                margin-bottom: 20px;
+                display: flex;
+              justify-content: center;
+              align-items: flex-start;
+            margin-top: 20px;
+              padding-top: 20px; /* Adjust the spacing from the top */
+              ">Arcade</button></a>
+          </div>
         </div>  
     </div>
+    <footer>
+        &copy; 2024 Ravez<br>
+        <a href="https://ravezsocialclub.com/pages/terms-and-conditions" target="_blank">Terms and Conditions</a><br>
+        <a href="https://ravezsocialclub.com/pages/privacy-policy" target="_blank">Privacy Policy</a>
+        
     </footer>
     <script src="../common/utils.js"></script>
     <script src="./script.js"></script>

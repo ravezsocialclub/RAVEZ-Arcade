@@ -1,0 +1,146 @@
+:root{
+    --accent-color: #000000;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+  background: linear-gradient(185deg, #FFFFFF, #7F48B0, #9417BD);
+    background-size: cover;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.4;
+    color: #fff;
+    cursor: url(ravencursor.png), auto; /* Custom cursor */
+  }
+  
+  .main-logo {
+  position:absolute; 
+    width:100%;
+    top: 20px;
+    left:40%;
+    align-items: center;
+  
+  }
+  .social-icons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  /* Rest of your CSS styles */
+  
+  
+  .social-icons img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px; /* Adjust spacing between icons */
+  }
+  
+  .container{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+  }
+  
+  img{
+    max-width: 200%;
+  }
+  
+  ul{
+    list-style-type: none;
+  }
+  
+  li{
+    margin-bottom: 16px;
+  }
+  
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    color: var(--accent-color);
+  }
+  
+  .board{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-area{
+    padding: 12px;
+    position: relative;
+  }
+  
+  .game-data{
+    padding: 12px;
+    width: 240px;
+  }
+  
+  h1{
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  
+  p{
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  #startButton {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #startButton:hover {
+    background-color: #5c128e;
+  }
+  
+  /*ALERT*/
+  
+  .game-alert{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .game-alert-message{
+    font-size: 40px;
+    padding: 20px;
+    background-color: var(--accent-color);
+  }
+  footer {
+    text-align: center;
+    bottom: 0px;
+    padding: 20px;
+    font-size: 14px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect to footer text */
+  }
+  
+  
+  /* Menu bar and footer links hover effect */
+  a:hover {
+    color: #5c128e; /* Change to the desired hover color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+  }
+  
