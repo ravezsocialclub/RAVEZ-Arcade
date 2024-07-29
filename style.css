@@ -9,7 +9,6 @@
 }
 
 body {
-  background-image: url(raven1.jpg);
   background: linear-gradient(185deg, #FFFFFF, #7F48B0, #9417BD); /* Updated gradient direction and colors */
   background-size: cover;
   background-repeat: no-repeat;
@@ -196,4 +195,12 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
+@media (max-width:550px) {
+  .main-logo{
+    width: 60%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+  }
 }
