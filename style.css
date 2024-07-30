@@ -22,7 +22,7 @@ body {
   cursor: url(ravencursor.png), auto; /* Custom cursor */
 }
 
-.main-logo {
+#main-logo {
   position: absolute;
   top:20px;
   right:40%;
