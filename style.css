@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(185deg, #FFFFFF, #7F48B0, #9417BD); /* Updated gradient direction and colors */
+  background: linear-gradient(185deg, #FFFFFF, #7F48B0, #9417BD);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,23 +19,26 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  cursor: url(ravencursor.png), auto; /* Custom cursor */
+  cursor: url(ravencursor.png), auto;
 }
 
 #main-logo {
-  position: absolute;
-  top:20px;
-  right:40%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  height: 100%; /* Adjust based on your needs */
-  width: 20%;
-  padding-top: 20px; /* Adjust the spacing from the top */
+  align-items: center;
+  width: 100%; /* Ensure the logo container spans the full width */
+  margin-top: 20px; /* Adjust the spacing from the top */
+}
+
+#main-logo img {
+  max-width: 100%;
+  height: auto;
+  width: 300px; /* Default size */
 }
 
 .container {
-  width: 600px;
+  width: 80%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,8 +78,6 @@ a:hover {
 }
 
 #muteButton.active img {
-  /* Add styles for the active state */
-  /* For example, change opacity to indicate muted state */
   opacity: 0.5;
 }
 
@@ -97,110 +98,49 @@ a:hover {
   color: white;
 }
 
-.raven-one {
-  width: 50%;
-  height: 10%;
-}
-
-.menu-bar a {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-a:hover {
-  color: #5c128e; /* Change to the desired hover color */
-  transition: color 0.3s ease; /* Smooth transition effect */
-}
-
-.privacy-text {
-  position: center;
-  text-align: center;
-  margin: 50px auto;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the privacy policy text */
-}
-
 .terms-text {
-  position: center;
   text-align: center;
   margin: auto;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the privacy policy text */
-}
-
-.raven-one {
-  position: fixed;
-  bottom: 0px; /* Adjust position as needed */
-  left: 13px; /* Adjust position as needed */
-  z-index: 999; /* Ensure it is above the phone screen */
-}
-
-.raven-two {
-  position: fixed;
-  bottom: 0px; /* Adjust position as needed */
-  left: 50px; /* Slightly to the left of the first one */
-  z-index: 999; /* Ensure it is above the phone screen */
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 ul li a {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for "Our Story", "Contact Us", "Careers" */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.mute-btn a {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-}
-
-.image-video video {
-  width: 195px;
-  position: absolute;
-  bottom: 90px;
-  right: 36px;
-  border-radius: 80px;
-}
-
-.phone-screen {
-  position: absolute;
-  bottom: -7px;
-  right: -70px;
-}
-
-@media only screen and (max-width: 1100px) {
-  .phone-screen {
-    visibility: collapse;
-  }
-  .image-video video {
-    visibility: collapse;
-  }
-}
-
-.title {
-  position: relative;
-  right: 50%;
-  margin-top: 20px;
-}
-
-ul li a img {
-  height: 35px;
-  width: 30px;
-}
 footer {
-  position: none;
   text-align: center;
   padding: 20px;
   font-size: 14px;
 }
-@media (max-width:550px) {
-  .main-logo{
-    width: 60%;
-    position: absolute;
-    top: 20px;
-    left: 50%;
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+  #main-logo img {
+    width: 60%; /* Adjust width for mobile */
+  }
+  .container {
+    width: 90%;
+  }
+  .terms-text {
+    padding: 10px;
+  }
+  ul li a img {
+    height: 25px;
+    width: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  #main-logo img {
+    width: 300px; /* Restore size for larger screens */
+  }
+  ul li a img {
+    height: 30px;
+    width: 25px;
   }
 }
