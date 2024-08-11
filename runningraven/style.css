@@ -1,24 +1,96 @@
 @font-face {
   font-family: 'ravenFont';
-  src: url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" );
+  src: url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 }
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f7f7f7;
   margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(185deg, #FFFFFF, #7F48B0, #9417BD);
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  padding: 0px 0;
+}
+
+.main-logo {
+  margin-bottom: 10px;
+  height: 300px;
+  left: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-logo img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.arcade-button {
+  margin-bottom: 7s0px;
+}
+
+.arcade-button {
+  background-color: #fff;
+  color: #9417BD;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+  margin-top: auto;
+  border-radius: 5px;
+  padding: 15px; /* Match padding to restart button */
+  font-size: 18px; /* Match font size to restart button */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.game-text {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game-data {
+  margin-bottom: 70px;
+}
+
+.game-data .score, .game-data .high-score {
+  font-size: 14px;
+  color: #fff;
+  background-color: #333;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0 auto;
+  width: 250px;
+  height: 50px;
+  line-height: 30px;
+  position: relative;
+}
+
+.game-data .high-score {
+  color: #4CAF50;
 }
 
 .game-container {
-  position: relative;
-  width: 800px;
+  width: 100%;
   height: 200px;
   border-bottom: 4px solid #333;
   overflow: hidden;
-  background-color: transparent; /* Transparent background */
+  background-color: transparent;
+  margin: 0 auto;
+  position: relative;
 }
 
 .dino {
@@ -27,7 +99,7 @@ body {
   left: 50px;
   width: 40px;
   height: 40px;
-  background: url('running-raven.png') no-repeat center; /* Replace with correct URL */
+  background: url('running-raven.png') no-repeat center;
   background-size: contain;
 }
 
@@ -37,158 +109,102 @@ body {
   right: 0;
   width: 30px;
   height: 50px;
-  background: url('plant.png') no-repeat center; /* Replace with correct URL */
+  background: url('plant.png') no-repeat center;
   background-size: contain;
   animation: moveCactus 2s linear infinite;
 }
 
 @keyframes moveCactus {
   from {
-      right: -20px;
+    right: -20px;
   }
   to {
-      right: 100%;
+    right: 100%;
   }
-}
-
-.score, .high-score {
-  position: absolute;
-  top: 50%;
-  font-size: 16px;
-  color: #fff; /* Ensure text is visible */
-  width: 200px;
-  background-color: #333;
-}
-
-.score {
-  position: absolute;
-  left: 10px;
-  top:125%;
-  height: 12%;
-}
-
-.high-score {
-  left: 10px;
-  top:140%;
-  height: 20%;
-  color: #4CAF50;
-
 }
 
 .restart-button {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  font-size: 21px;
-  cursor: pointer;
-  background-color: #fff; /* Button background for visibility */
-  border-radius: 50px;
-  background: linear-gradient(270deg, blue, green);
-  color: white;
-  border:none;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  color: #9417BD;
+  border-radius: 5px;
+  border: none;
 }
+
 .start-button {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px 30px;
   font-size: 20px;
   cursor: pointer;
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  color: #9417BD;
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 footer {
   position: relative;
+  width: 100%;
   text-align: center;
-  bottom: 0px;
-  padding: 20px;
+  color: #fff;
+  padding: 10px;
   font-size: 14px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect to footer text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-@media only screen  {
-  html{
-    width:100%;
-    position:fixed;
+
+@media (max-width: 796px) {
+  .main-logo img {
+    width: 60%;
+    max-width: 200px;
   }
-  .body{
-    width: 100%;
-    background-size: 100% 100%
+
+  .game-container {
+    height: 150px;
   }
-  .menu-bar{
-    width: 100%;
+
+  .dino, .cactus {
+    width: 30px;
+    height: 30px;
   }
-  .menu-bar a{
-    width: 90%;
+
+  .game-data .score, .game-data .high-score {
+    font-size: 12px;
+    width: 120px;
   }
-  .menu-bar img{
-    width: 90%;
-    height: 90%;
+
+  .arcade-button button {
+    padding: 15px 30px; /* Ensure padding is consistent */
+    font-size: 18px; /* Ensure font size is consistent */
   }
+}
+
+@media (max-height: 560px) {
   footer {
-    width:100%;
-    position:fixed;
-    bottom:0px;
-    background-image: 100%;
-}
-
-}
-@media (max-width:796px) {
-  .body{
-    width: 100%;
-    background-size: 100% 100%
+    font-size: 12px;
+    padding: 5px;
   }
 
-    footer {
-      width:100%;
-      bottom:0px;
+  .game-data {
+    font-size: 12px;
   }
-  .raven-one {
-    width:50%;
-    height:10%;
-  }
-  .game-data{
-    width:80%;
-    bottom:0px;
-  }
-  .game-container{
-    position: relative;
-    width:100%;
-    top:0px;
 
+  .game-data .score, .game-data .high-score {
+    font-size: 10px;
   }
-  .main-logo{
-      position: absolute;
-      left: 10%;
-      top: 25px;
-      width:100%;
-     width:50%;
-     height: 70%;
-  }
-  .score {
-    left: 10px;
-    top:60%;
-    width: 200px;
-    height: 4%;
-  }
-  
-  .high-score {
-    top:65%;
-    width: 200px;
-    height: 8%;
-  }
-}
-@media (max-height:560px) {
-  footer {
-    visibility: collapse;}
-    .game-data {
-      visibility: collapse;
-    }
 
+  .game-container {
+    height: 120px;
+  }
 }
