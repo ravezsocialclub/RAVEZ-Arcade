@@ -13,50 +13,33 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-
+    <div class="main-logo">
+        <img src="../raven-white.png" alt="Arcade Game Logo">
+    </div>
+    <a href="../index.html">
+        <button class="arcade-button">Arcade</button>
+    </a>
     <div class="container">
-        <a href="https://ravezsocialclub.com/">
-            <div class="main-logo" >
-                <img src="../raven-white.png" alt="Arcade Game Logo" width="300">
-            </div>
-        </a>
-        <div class="game-data" style="position: fixed; top: 24%; left: 40px; ;">
+        
+        <div class="game-data">
             <h1>Running Raven</h1>
-            <p>Press SPACE to jump and dodge the plants!</p>
+            <p>Tap or Press SPACE to jump and dodge the plants!</p>
             <div class="score">Score: 0</div>
             <div class="high-score">High Score: 0</div>
-            <a href="../index.html"> <button style ="  display:flex;
-                align-items: center;
-                padding: 15px 30px;
-                font-size: 16px;
-                color: white;
-                gap: 10px;
-                border:none;
-                border-radius: 50px;
-                background: linear-gradient(270deg,black, #5c128e);
-                cursor: pointer;
-                margin-bottom: 20px;
-                display: flex;
-              justify-content: center;
-              align-items: flex-start;
-            margin-top: 20px;
-              padding-top: 20px; /* Adjust the spacing from the top */
-              ">Arcade</button></a>
+            
         </div>
 
-    <div class="game-container">
-        <div class="dino"></div>
-        <div class="cactus"></div>
-        <button class="restart-button">Restart</button>
-        <button class="start-button">Start Game</button>
+        <div class="game-container">
+            <div class="dino"></div>
+            <div class="cactus"></div>
+            <button class="restart-button">Restart</button>
+            <button class="start-button">Start Game</button>
+        </div>
+
+        <footer>
+            &copy; 2024 Ravez
+        </footer>
     </div>
- </div>
-    <footer>
-        &copy; 2024 Ravez<br>
-        <a href="https://ravezsocialclub.com/pages/terms-and-conditions" target="_blank">Terms and Conditions</a><br>
-        <a href="https://ravezsocialclub.com/pages/privacy-policy" target="_blank">Privacy Policy</a>
-    </footer>
 
     <script src="./script.js"></script>
 </body>
